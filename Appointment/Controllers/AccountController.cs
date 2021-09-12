@@ -9,12 +9,14 @@ namespace Appointment.Controllers
 {
     public class AccountController : Controller
     {
+        //database access
         private readonly ApplicationDbContext _db;
 
         public AccountController(ApplicationDbContext db)
         {
             _db = db;
         }
+        
         public IActionResult Index()
         {
             return View();
