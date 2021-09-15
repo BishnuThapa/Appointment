@@ -4,7 +4,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
 
-namespace Appointment.Helper
+namespace Appointment.Utility
 {
     public static class Helper
     {
