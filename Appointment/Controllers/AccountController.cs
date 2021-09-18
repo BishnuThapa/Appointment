@@ -59,7 +59,10 @@ namespace Appointment.Controllers
                 var result = await _userManager.CreateAsync(user);
                 if (result.Succeeded)
                 {
+                    //if role is created successfully then assigned role to user in register view
                     await _userManager.AddToRoleAsync(user, model.RoleName);
+
+                    //automatically signin newly created user
                     await _signInManager.SignInAsync(user, isPersistent: false);
                     return RedirectToAction("Index", "Home");
                 }
