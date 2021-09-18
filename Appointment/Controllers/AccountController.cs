@@ -74,7 +74,7 @@ namespace Appointment.Controllers
                     Name = model.Name
                     
                 };
-                var result = await _userManager.CreateAsync(user);
+                var result = await _userManager.CreateAsync(user,model.Password);
                 if (result.Succeeded)
                 {
                     //if role is created successfully then assigned role to user in register view
