@@ -1,5 +1,5 @@
 ﻿@*to check if the user is signed in or not*@
-@inject Microsoft.AspNetCore.Identity.SignInManager<Microsoft.AspNetCore.Identity.IdentityUser> signInManager
+@inject Microsoft.AspNetCore.Identity.SignInManager<Appointment.Models.ApplicationUser> signInManager
 
 @if (signInManager.IsSignedIn(User))
 {

@@ -1,7 +1,7 @@
 ﻿@model Appointment.Models.ViewModels.RegisterViewModel
 
 <h2>Sign up</h2>
-<form asp-controller="Account" asp-action="Register">
+<form method="post" asp-controller="Account" asp-action="Register">
     <h4>Create a new account.</h4>
     <hr />
     @*<div asp-validation-summary="All" class="text-danger"></div>*@
@@ -40,7 +40,7 @@
         <label class="col-md-2" asp-for="RoleName"></label>
 
         <div class="col-md-10">
-            <select class=" form-control" asp-items="@Appointment.Utility.Helper.GetRolesForDropdown()">
+            <select asp-for="RoleName" class=" form-control" asp-items="@Appointment.Utility.Helper.GetRolesForDropdown()">
             </select>
             <span asp-validation-for="RoleName" class="text-danger"></span>
         </div>

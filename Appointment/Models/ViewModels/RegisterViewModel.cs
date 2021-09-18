@@ -16,8 +16,9 @@ namespace Appointment.Models.ViewModels
         public string Email { get; set; }
 
         [Required]
-        [StringLength(40,ErrorMessage ="The {0} must be at least {2} characters long.",MinimumLength = 6)]
         [DataType(DataType.Password)]
+        [StringLength(40,ErrorMessage ="The {0} must be at least {2} characters long.",MinimumLength = 6)]
+        
         public string Password { get; set; }
 
         [DataType(DataType.Password)]
